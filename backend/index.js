@@ -111,6 +111,10 @@ app.post('/summarize', async (req, res) => {
 
     const summary = response.generations[0].text.trim();
 
+     await axios.post(process.env.SLACK_WEBHOOK_URL, {
+      text: `📝 *Todo Summary:*\n${summary}`,
+    });
+    
     res.status(200).json({ summary });
   } catch (error) {
     console.error('Error generating summary:', error);

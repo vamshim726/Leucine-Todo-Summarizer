@@ -19,7 +19,7 @@ app.use(cors({
 
 const port = process.env.PORT || 3000
 
-app.post("/todo", async (req,res)=>{
+app.post("/todos", async (req,res)=>{
     const createPayLoad=req.body;   
     const parsePayLoad=createTodo.safeParse(createPayLoad);
 

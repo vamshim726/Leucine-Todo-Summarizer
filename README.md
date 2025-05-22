@@ -17,7 +17,7 @@ This is a full-stack application that allows users to manage their to-do items a
 - **LLM Integration**: Cohere AI
 - **Slack Integration**: Slack Incoming Webhooks
 - **Hosting**: Vercel (Frontend), Render (Backend)
-- **Database**: NoSQL MongoDB
+- **Database**:  MongoDB
 
 ---
 

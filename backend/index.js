@@ -5,17 +5,14 @@ const {todo} = require ("./db")
 const cors = require('cors')
 const { CohereClient } = require('cohere-ai');
 const dotenv = require('dotenv');
+const axios = require('axios');
 dotenv.config();
 
  const cohere = new CohereClient({
   token: process.env.COHERE_API_KEY,
 });
 app.use(express.json()) 
-app.use(cors({
-    origin: 'https://leucine-todo-summarizer.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
- }))
+app.use(cors())
 
 const port = process.env.PORT || 3000
 
@@ -114,7 +111,7 @@ app.post('/summarize', async (req, res) => {
      await axios.post(process.env.SLACK_WEBHOOK_URL, {
       text: `📝 *Todo Summary:*\n${summary}`,
     });
-    
+
     res.status(200).json({ summary });
   } catch (error) {
     console.error('Error generating summary:', error);

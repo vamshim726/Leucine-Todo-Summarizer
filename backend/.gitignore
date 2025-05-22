@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables
+.env
+.env.test
+.env.local
+
+# Debug
+.vscode/
+.idea/
+
+# Optional npm cache directory
+.npm/
+
+# Build directories
+dist/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# Next.js or other frontend frameworks (if full stack)
+.next/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+#

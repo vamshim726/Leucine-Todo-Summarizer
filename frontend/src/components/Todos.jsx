@@ -4,7 +4,7 @@ import React from 'react';
 
 export function Todos({ todos, onDeleteTodo, onCompleteTodo }) {        
   const handleDelete = async (id) => {
-    console.log(id);    
+    // console.log(id);    
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/todo`, {
         method: 'DELETE',

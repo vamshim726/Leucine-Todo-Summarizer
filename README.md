@@ -21,6 +21,21 @@ This is a full-stack application that allows users to manage their to-do items a
 
 ---
 
+ 
+## Deployment
+
+### Frontend
+The frontend is deployed on Vercel.
+
+You can view the live application at:
+[https://leucine-todo-summarizer.vercel.app/]
+
+### Backend
+The backend is deployed on Render.
+
+You can access the backend at:
+[https://leucine-todo-summarizer.onrender.com]
+
 ## Setup Instructions
 
 ### 1. **Clone the Repository**

@@ -43,8 +43,8 @@ You can access the backend at:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/todo-summary-assistant.git
-cd todo-summary-assistant
+git clone https://github.com/yourusername/Leucine-Todo-Summarizer
+cd Leucine-Todo-Summarizer
 ```
 
 ### 2. **Frontend Setup (React)**

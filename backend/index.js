@@ -12,11 +12,12 @@ dotenv.config();
 });
 app.use(express.json())
 app.use(cors())
+app.use(cors({ origin: 'https://leucine-todo-summarizer.onrender.com' }))
 
 const port = process.env.PORT || 3000
 
 app.post("/todo", async (req,res)=>{
-    const createPayLoad=req.body;
+    const createPayLoad=req.body;   
     const parsePayLoad=createTodo.safeParse(createPayLoad);
 
     if(!parsePayLoad.success){

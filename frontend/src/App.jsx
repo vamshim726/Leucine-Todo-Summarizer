@@ -16,7 +16,7 @@
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch("http://localhost:3000/todos");
+          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/todos`);
           if (!response.ok) {
             throw new Error('Failed to fetch todos');
           }
@@ -55,7 +55,7 @@
 const handleSummarize = async () => {
   setIsSummarizing(true); // Start loading
   try {
-    const response = await fetch('http://localhost:3000/summarize', {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/summarize`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ export function CreateTodo({ onTodoAdded }) {
 
   const handleAddTodo = async () => {
     try {
-      await axios.post("http://localhost:3000/todo", {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/todos`, {
         title,
         description,
       });

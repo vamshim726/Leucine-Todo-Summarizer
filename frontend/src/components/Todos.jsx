@@ -6,7 +6,7 @@ export function Todos({ todos, onDeleteTodo, onCompleteTodo }) {
   const handleDelete = async (id) => {
     console.log(id);    
     try {
-      const response = await fetch(`http://localhost:3000/todo`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/todo`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export function Todos({ todos, onDeleteTodo, onCompleteTodo }) {
 
   const handleComplete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/completed`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/completed`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -10,9 +10,12 @@ dotenv.config();
  const cohere = new CohereClient({
   token: process.env.COHERE_API_KEY,
 });
-app.use(express.json())
-app.use(cors())
-app.use(cors({ origin: 'https://leucine-todo-summarizer.onrender.com' }))
+app.use(express.json()) 
+app.use(cors({
+    origin: 'https://leucine-todo-summarizer.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+ }))
 
 const port = process.env.PORT || 3000
 

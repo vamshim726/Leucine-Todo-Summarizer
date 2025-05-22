@@ -132,7 +132,7 @@ return (
       <span>Please wait, summarizing...</span>
     </>
   ) : (
-    'Summarize Todos'
+    'Summarize Todos and Send to Slack'
   )}
 </button>
 
